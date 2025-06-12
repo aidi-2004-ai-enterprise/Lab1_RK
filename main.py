@@ -1,6 +1,8 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
+import xgboost as xgb
 
+#Person A 
 def main():
     print("Hello from lab1-rk!")
 
@@ -22,5 +24,14 @@ def main():
     print("X_train shape:", X_train.shape)
     print("X_test shape:", X_test.shape)
 
+    # Person B: build the model
+    model = build_default_model()
+
+def build_default_model():
+    model = xgb.XGBClassifier()
+    print("Default XGBoost model created:", model)
+    return model
+
 if __name__ == "__main__":
     main()
+
